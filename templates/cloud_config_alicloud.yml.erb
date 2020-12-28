@@ -22,6 +22,7 @@ networks:
       <% network.static.each do |range| %>
     - <%= range %>
     <% end %>
+    static_ip: <%= network.static[0] %>
     gateway: <%= network.gateway %>
     cloud_properties:
       security_group_ids:
